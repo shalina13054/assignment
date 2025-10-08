@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #212121; /* Dark Grey/Black */
+    color: #ed1d24; /* Avengers Red */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #0056b3; /* Blue accent */
+}
+
+h1 {
+    margin: 0;
+}
+
+.nav-button {
+    background-color: #0056b3; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-button:hover, .add-to-cart-btn:hover, #checkout-btn:hover, #shop-more-btn:hover {
+    opacity: 0.8;
+}
+
+.page-view {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Products */
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #212121;
+}
+
+.product-price {
+    color: #ed1d24;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.add-to-cart-btn {
+    background-color: #ed1d24; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Cart */
+#cart-items {
+    min-height: 100px;
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+#cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#checkout-btn, #shop-more-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+/* Add to Cart Notification */
+#add-to-cart-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: 1000;
+}
