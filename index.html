@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers Gear Store</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+    </head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header>
+        <h1>Avengers Gear Store</h1>
+        <nav>
+            <button id="home-link" class="nav-button">Home</button>
+            <button id="cart-link" class="nav-button">
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <main id="home-page" class="page-view">
+        <h2>Assemble Your Arsenal</h2>
+        <div id="products">
+            <div class="product-card" data-product-id="A001" data-price="25.00" data-name="Iron Man Arc Reactor Keychain">
+                <p class="product-name">Iron Man Arc Reactor Keychain</p>
+                <p class="product-price">$25.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="A002" data-price="75.00" data-name="Captain America Shield Replica">
+                <p class="product-name">Captain America Shield Replica (Mini)</p>
+                <p class="product-price">$75.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="A003" data-price="15.00" data-name="Hulk Smash Mug">
+                <p class="product-name">Hulk Smash Mug</p>
+                <p class="product-price">$15.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="cart-page" class="page-view hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p id="empty-cart-message">Your cart is empty. Go shopping!</p>
+        </div>
+        <div id="cart-summary" class="hidden">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <main id="thankyou-page" class="page-view hidden">
+        <h2>Purchase Complete!</h2>
+        <p>Thank you for your order. The universe is safer because of you.</p>
+        <p>Your Order ID is: <span id="order-id"></span></p>
+        <p>A purchase event should be sent to GA4 from this page.</p>
+        <button id="shop-more-btn">Shop More</button>
+    </main>
+
+    <div id="add-to-cart-notification" class="hidden">+1 Added!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
